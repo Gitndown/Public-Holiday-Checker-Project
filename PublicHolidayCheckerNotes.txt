@@ -1,0 +1,61 @@
+Public Holiday Checker
+
+Console Menu
+(have a deparate menu)
+
+Show method to display user
+
+List of options: list/array to loop through
+
+What option? 
+
+Console.ReadLine, response from customer
+
+FUNCTION 1:
+
+Console.ReadLine 2 values (year, country)
+API call from the country & year to endpoint
+Display (name , date of holiday)
+
+Console.ReadLine "Would you like to return to the main menu?"
+if yes, then what option would you like to choose?
+if no, exit
+
+FUNCTION 2:
+
+Console.ReadLine 1 value (country)
+API call from the country to endpoint
+Check status code 
+if status code == 200 "today is a public holiday"
+if status code is == 204 "today is not a public holiday" 
+Console.ReadLine "Would you like to return to the main menu?"
+if yes, then what option would you like to choose?
+if no, exit
+
+Function 3: 
+Ask what date would you like to check? Grab the year from that date. (get the 4 last char of a string-GOOGLE THIS)
+
+Ask what country? 
+Console.ReadLine both values (yearFromDate, Country)
+
+filter the correct date
+if date property == userDate "This is a public holiday" 
+
+error handling : 
+
+make sure they are giving us a year not random
+
+make sure they give us a valid year 
+Limit is 1922-2120
+
+make sure they are entering vaid country code. 
+
+Call to end point get list of country codes(availableCountries), ldoes it exist? 
+
+
+
+
+
+
+
+

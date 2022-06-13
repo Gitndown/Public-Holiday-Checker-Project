@@ -1,0 +1,15 @@
+C:\Users\1164536\Documents\WooliesX-Nology\Projects\Public-Holiday-Checker-Project\PublicHolidayChecker\bin\Debug\net6.0\PublicHolidayChecker.exe
+C:\Users\1164536\Documents\WooliesX-Nology\Projects\Public-Holiday-Checker-Project\PublicHolidayChecker\bin\Debug\net6.0\PublicHolidayChecker.deps.json
+C:\Users\1164536\Documents\WooliesX-Nology\Projects\Public-Holiday-Checker-Project\PublicHolidayChecker\bin\Debug\net6.0\PublicHolidayChecker.runtimeconfig.json
+C:\Users\1164536\Documents\WooliesX-Nology\Projects\Public-Holiday-Checker-Project\PublicHolidayChecker\bin\Debug\net6.0\PublicHolidayChecker.dll
+C:\Users\1164536\Documents\WooliesX-Nology\Projects\Public-Holiday-Checker-Project\PublicHolidayChecker\bin\Debug\net6.0\PublicHolidayChecker.pdb
+C:\Users\1164536\Documents\WooliesX-Nology\Projects\Public-Holiday-Checker-Project\PublicHolidayChecker\obj\Debug\net6.0\PublicHolidayChecker.csproj.AssemblyReference.cache
+C:\Users\1164536\Documents\WooliesX-Nology\Projects\Public-Holiday-Checker-Project\PublicHolidayChecker\obj\Debug\net6.0\PublicHolidayChecker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1164536\Documents\WooliesX-Nology\Projects\Public-Holiday-Checker-Project\PublicHolidayChecker\obj\Debug\net6.0\PublicHolidayChecker.AssemblyInfoInputs.cache
+C:\Users\1164536\Documents\WooliesX-Nology\Projects\Public-Holiday-Checker-Project\PublicHolidayChecker\obj\Debug\net6.0\PublicHolidayChecker.AssemblyInfo.cs
+C:\Users\1164536\Documents\WooliesX-Nology\Projects\Public-Holiday-Checker-Project\PublicHolidayChecker\obj\Debug\net6.0\PublicHolidayChecker.csproj.CoreCompileInputs.cache
+C:\Users\1164536\Documents\WooliesX-Nology\Projects\Public-Holiday-Checker-Project\PublicHolidayChecker\obj\Debug\net6.0\PublicHolidayChecker.dll
+C:\Users\1164536\Documents\WooliesX-Nology\Projects\Public-Holiday-Checker-Project\PublicHolidayChecker\obj\Debug\net6.0\refint\PublicHolidayChecker.dll
+C:\Users\1164536\Documents\WooliesX-Nology\Projects\Public-Holiday-Checker-Project\PublicHolidayChecker\obj\Debug\net6.0\PublicHolidayChecker.pdb
+C:\Users\1164536\Documents\WooliesX-Nology\Projects\Public-Holiday-Checker-Project\PublicHolidayChecker\obj\Debug\net6.0\PublicHolidayChecker.genruntimeconfig.cache
+C:\Users\1164536\Documents\WooliesX-Nology\Projects\Public-Holiday-Checker-Project\PublicHolidayChecker\obj\Debug\net6.0\ref\PublicHolidayChecker.dll
