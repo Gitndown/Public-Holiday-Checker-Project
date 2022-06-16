@@ -45,14 +45,26 @@ namespace PublicHolidayChecker
 
                 case "3":
                     Console.Clear();
-                    output = "Please enter in the date you want to check using the format DD/MM/YYY";
+                    output = "Please enter in the country code";
+                    Console.WriteLine(output);
+                    string countryC = Console.ReadLine();
+                    output = "Please enter in the date you want to check using the format YYYY-MM-DD";
                     Console.WriteLine(output);
                     string date = Console.ReadLine();
-                    string QueenBday = "13/06/2022";
-                    if (date == QueenBday)
-                        output = "This was a public holiday";
-                    else;
-                    Console.WriteLine(output);
+                    string yearTaken = GrabYearFromDate(date);
+                    Option option3 = new Option(new HttpClient(), $"https://date.nager.at/api/v3/IsTodayPublicHoliday/{yearTaken}/{countryC}");
+                    option3.CheckDateForHoliday(yearTaken, countryC).GetAwaiter().GetResult();
+                    Holiday[] test2 = option3.CheckByYearAndCountry(yearTaken, countryC).GetAwaiter().GetResult();
+                    Console.WriteLine("NOTE: Any results found will display below. Press any key to continue");
+                    Console.ReadLine();
+                    foreach (Holiday h in test2)
+                    {
+                        string hDateStr = Convert.ToString(h.date);
+                        if (hDateStr == date)
+                            Console.WriteLine($"Public holiday DETECTED: {h.name}-{h.date}");
+                        
+                    }
+                    option3.ClearSpace();
                     break;
 
                 case "4":
@@ -61,7 +73,19 @@ namespace PublicHolidayChecker
                     break;
 
             }
-            
+            static string GrabYearFromDate(string date)
+            {
+                string[] arrDate = date.Split('-');
+
+                string day = arrDate[2];
+                string month = arrDate[1];
+                string year = arrDate[0];
+
+                return year;
+
+
+            }
+
 
 
 
