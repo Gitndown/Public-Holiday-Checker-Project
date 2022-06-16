@@ -24,19 +24,23 @@ namespace PublicHolidayChecker
                     Console.WriteLine(output);
                     string year = Console.ReadLine();
 
-                    Option option1 = new();
-                    option1.CheckByYearAndCountry(year, countryCode);
+                    Option option1 = new Option(new HttpClient(), $"https://date.nager.at/api/v3/PublicHolidays/{year}/{countryCode}");
+                    Holiday[] test = option1.CheckByYearAndCountry(year, countryCode).GetAwaiter().GetResult();
+                    foreach (Holiday h in test)
+                    {
+                        Console.WriteLine($"{h.name}-{h.date}");
+                    }
+                    option1.ClearSpace();
                     break;
 
                 case "2":
                     Console.Clear();
-                    bool isPublicHoliday = true;
-                    if ( isPublicHoliday == true)
-
-                    output = "Today is a public Holiday";
-                  
-                    else output = "Today is not a public holiday";
+                    output = "Please enter in the country code";
                     Console.WriteLine(output);
+                    string country = Console.ReadLine();
+                    Option option2 = new Option(new HttpClient(), $"https://date.nager.at/api/v3/IsTodayPublicHoliday/{country}");
+                    option2.CheckToday(country).GetAwaiter().GetResult();
+                    option2.ClearSpace();
                     break;
 
                 case "3":
