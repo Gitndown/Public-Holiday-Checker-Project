@@ -15,6 +15,7 @@ namespace PublicHolidayChecker
             string output = null;           
             switch (mainMenu)
             {
+                // OPTION 1
                 case "1":
                     Console.Clear();
                     output = "Please enter in the country code";
@@ -28,11 +29,12 @@ namespace PublicHolidayChecker
                     Holiday[] test = option1.CheckByYearAndCountry(year, countryCode).GetAwaiter().GetResult();
                     foreach (Holiday h in test)
                     {
-                        Console.WriteLine($"{h.name}-{h.date}");
+                        Console.WriteLine($"{h.name} - {h.date}");
                     }
                     option1.ClearSpace();
                     break;
 
+                 // OPTION 2
                 case "2":
                     Console.Clear();
                     output = "Please enter in the country code";
@@ -43,6 +45,7 @@ namespace PublicHolidayChecker
                     option2.ClearSpace();
                     break;
 
+                // OPTION 3
                 case "3":
                     Console.Clear();
                     output = "Please enter in the country code";
@@ -51,28 +54,31 @@ namespace PublicHolidayChecker
                     output = "Please enter in the date you want to check using the format YYYY-MM-DD";
                     Console.WriteLine(output);
                     string date = Console.ReadLine();
-                    string yearTaken = GrabYearFromDate(date);
+                    string yearTaken = GrabYearFromDate(date); // grabbing the year so we can check which public holidays in this year
                     Option option3 = new Option(new HttpClient(), $"https://date.nager.at/api/v3/IsTodayPublicHoliday/{yearTaken}/{countryC}");
-                    option3.CheckDateForHoliday(yearTaken, countryC).GetAwaiter().GetResult();
+                    option3.CheckByYearAndCountry(yearTaken, countryC).GetAwaiter().GetResult();
                     Holiday[] test2 = option3.CheckByYearAndCountry(yearTaken, countryC).GetAwaiter().GetResult();
                     Console.WriteLine("NOTE: Any results found will display below. Press any key to continue");
                     Console.ReadLine();
-                    foreach (Holiday h in test2)
+                    foreach (Holiday h in test2) // Comparing against the other public holidays
                     {
                         string hDateStr = Convert.ToString(h.date);
                         if (hDateStr == date)
-                            Console.WriteLine($"Public holiday DETECTED: {h.name}-{h.date}");
+                            Console.WriteLine($"Public holiday DETECTED: {h.name} - {h.date}");
                         
                     }
                     option3.ClearSpace();
                     break;
 
+                // OPTION 4
                 case "4":
                     output = "Closing app...";
                     Console.WriteLine(output);
                     break;
 
             }
+
+
             static string GrabYearFromDate(string date)
             {
                 string[] arrDate = date.Split('-');

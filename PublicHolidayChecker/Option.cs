@@ -69,23 +69,6 @@ namespace PublicHolidayChecker
                     return false;
         }
 
-        
-
-        public async Task<Holiday[]> CheckDateForHoliday(string year, string countryCode)
-        {
-
-            string url = $"https://date.nager.at/api/v3/PublicHolidays/{year}/{countryCode}";
-            HttpResponseMessage y = await _client.GetAsync(url);
-
-            string result = await y.Content.ReadAsStringAsync();
-            Holiday[] h = JsonConvert.DeserializeObject<Holiday[]>(result);
-            if (y.IsSuccessStatusCode)
-                return h;
-
-            throw new Exception("ERROR");
-
-        }
-
 
     }
 }
