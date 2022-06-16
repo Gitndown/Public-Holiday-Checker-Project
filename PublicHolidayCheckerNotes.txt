@@ -1,7 +1,7 @@
 Public Holiday Checker
 
 Console Menu
-(have a deparate menu)
+(have a separate menu)
 
 Show method to display user
 
@@ -41,7 +41,7 @@ Console.ReadLine both values (yearFromDate, Country)
 filter the correct date
 if date property == userDate "This is a public holiday" 
 
-error handling : 
+error handling: 
 
 make sure they are giving us a year not random
 
